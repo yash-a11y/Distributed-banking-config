@@ -17,12 +17,12 @@ spring:
              - Path=/payment/**
            filters:
              - StripPrefix=1
-#         - id: banking-fund-transfer-service
-#           uri: lb://banking-fund-transfer-service
-#           predicates:
-#             - Path=/fund-transfer/**
-#           filters:
-#             - StripPrefix=1
+         - id: banking-fund-transfer-service
+           uri: lb://banking-fund-transfer-service
+           predicates:
+             - Path=/fund-transfer/**
+           filters:
+             - StripPrefix=1
          - id: core-banking-service
            uri: lb://core-banking-service
            predicates:
